@@ -1,4 +1,5 @@
 import Header from "../../Components/Header";
+import NounSection from "../../Components/NounSection";
 import SearchBar from "../../Components/SearchBar";
 import SearchedWord from "../../Components/SearchedWord";
 
@@ -12,6 +13,7 @@ const MainPage = () => {
         <SearchBar />
       </div>
       <SearchedWord />
+      <NounSection />
     </div>
   );
 };

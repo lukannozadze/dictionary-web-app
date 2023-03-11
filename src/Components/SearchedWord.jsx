@@ -2,7 +2,7 @@ import PlayerIcon from "../UI/PlayerIcon";
 
 const SearchedWord = () => {
   return (
-    <div className="flex justify-between items-center">
+    <div className="flex justify-between items-center mb-[29px]">
       <div>
         <h1 className="text-[32px] leading-[38px] mb-[6px] text-[#2D2D2D] font-bold">
           Keyboard

@@ -3,3 +3,11 @@
 @tailwind utilities;
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lora:wght@700&display=swap");
+
+li::marker {
+  color: #8f19e8;
+}
+li span {
+  position: relative;
+  left: 5px;
+}
