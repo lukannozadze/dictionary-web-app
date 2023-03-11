@@ -1,11 +1,17 @@
 import Header from "../../Components/Header";
+import SearchBar from "../../Components/SearchBar";
+import SearchedWord from "../../Components/SearchedWord";
 
 const MainPage = () => {
   return (
-    <div className="pl-[39px] pr-[40px]">
-      <header className="pt-[58px]">
+    <div className="pl-6 pr-6 font-inter">
+      <div className="pt-6 mb-6">
         <Header />
-      </header>
+      </div>
+      <div className="mb-6">
+        <SearchBar />
+      </div>
+      <SearchedWord />
     </div>
   );
 };
