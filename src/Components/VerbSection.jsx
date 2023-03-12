@@ -22,7 +22,7 @@ const VerbSection = () => {
           </div>
         </li>
       </ul>
-      <div className="w-full h-[1px] bg-[#E9E9E9]"></div>
+      <div className="w-full h-[1px] bg-[#E9E9E9] mb-6"></div>
     </div>
   );
 };
