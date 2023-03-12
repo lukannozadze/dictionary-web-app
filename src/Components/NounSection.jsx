@@ -8,7 +8,7 @@ const NounSection = () => {
         <div className="w-full h-[1px] bg-[#E9E9E9]"></div>
       </div>
       <span className="text-[#757575] text-base leading-[20px]">Meaning</span>
-      <ul className="list-disc ml-[19px] text-[#2D2D2D] text-[15px] leading-6 flex flex-col gap-[13px]">
+      <ul className="list-disc ml-[19px] text-[#2D2D2D] text-[15px] leading-6 flex flex-col gap-[13px] mt-[17px]">
         <li>
           <span>
             (etc.) A set of keys used to operate a typewriter, computer etc.
@@ -29,7 +29,7 @@ const NounSection = () => {
           </span>
         </li>
       </ul>
-      <div className="flex gap-6 mt-6 mb-[43px]">
+      <div className="flex gap-6 mt-6">
         <span className="text-4 leading-5 text-[#757575]">Synonyms</span>
         <span className="text-4 leading-5 text-[#A445ED] font-bold">
           electronic keyboard

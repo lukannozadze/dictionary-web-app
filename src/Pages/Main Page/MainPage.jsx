@@ -2,6 +2,7 @@ import Header from "../../Components/Header";
 import NounSection from "../../Components/NounSection";
 import SearchBar from "../../Components/SearchBar";
 import SearchedWord from "../../Components/SearchedWord";
+import VerbSection from "../../Components/VerbSection";
 
 const MainPage = () => {
   return (
@@ -14,6 +15,7 @@ const MainPage = () => {
       </div>
       <SearchedWord />
       <NounSection />
+      <VerbSection />
     </div>
   );
 };
