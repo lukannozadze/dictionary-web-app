@@ -6,6 +6,10 @@ module.exports = {
       fontFamily: {
         inter: ["Inter", "sans-serif"],
         lora: ["Lora", "serif"],
+        inconsolata: ["Inconsolata", "monospace"],
+      },
+      boxShadow: {
+        custom: "0px 5px 30px 0px rgba(0, 0, 0, 0.1)",
       },
     },
   },
