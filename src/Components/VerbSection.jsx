@@ -1,4 +1,5 @@
-const VerbSection = () => {
+const VerbSection = (props) => {
+  console.log(props.wordObj[0]);
   return (
     <div>
       <div className="flex items-center gap-4 mt-[33px] mb-[31px]">
@@ -11,16 +12,23 @@ const VerbSection = () => {
         Meaning
       </span>
       <ul className="list-disc  text-[#2D2D2D] text-[15px] leading-6 flex flex-col gap-[13px] mt-[17px] ml-[19px] mb-8">
-        <li>
-          <div className="flex flex-col gap-[13px]">
-            <span className="text-[15px] leading-6 text-[#2D2D2D]">
-              To type on a computer keyboard.
-            </span>
-            <span className="text-[15px] leading-6 text-[#757575]">
-              “Keyboarding is the part of this job I hate the most.”
-            </span>
-          </div>
-        </li>
+        {Object.keys(props.wordObj).length !== 0 &&
+        props.wordObj[0].meanings[1] !== undefined
+          ? props.wordObj[0].meanings[1].definitions.map((item, index) => {
+              return (
+                <li key={index}>
+                  <div className="flex flex-col gap-[13px]">
+                    <span className="text-[15px] leading-6 text-[#2D2D2D]">
+                      {item.definition}
+                    </span>
+                    <span className="text-[15px] leading-6 text-[#757575]">
+                      {`“${item.example ? item.example : ""}”`}
+                    </span>
+                  </div>
+                </li>
+              );
+            })
+          : ""}
       </ul>
       <div className="w-full h-[1px] bg-[#E9E9E9] mb-6"></div>
     </div>

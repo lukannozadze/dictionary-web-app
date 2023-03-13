@@ -1,6 +1,8 @@
+import { useState } from "react";
 import SearchIcon from "../UI/SearchIcon";
 
 const SearchBar = () => {
+  const [word, setWord] = useState("");
   return (
     <label className="relative" htmlFor="searchWord">
       <input
@@ -8,8 +10,11 @@ const SearchBar = () => {
         type="text"
         name="searchWord"
         placeholder="Search for any word..."
+        onChange={(e) => {
+          setWord(e.target.value);
+        }}
       />
-      <SearchIcon className="absolute top-1 right-6" />
+      <SearchIcon className="absolute top-1 right-6" searchedWord={word} />
     </label>
   );
 };

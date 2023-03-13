@@ -1,4 +1,4 @@
-const NounSection = () => {
+const NounSection = (props) => {
   return (
     <div>
       <div className="flex items-center gap-4 mb-[31px]">
@@ -9,25 +9,15 @@ const NounSection = () => {
       </div>
       <span className="text-[#757575] text-base leading-[20px]">Meaning</span>
       <ul className="list-disc ml-[19px] text-[#2D2D2D] text-[15px] leading-6 flex flex-col gap-[13px] mt-[17px]">
-        <li>
-          <span>
-            (etc.) A set of keys used to operate a typewriter, computer etc.
-          </span>
-        </li>
-        <li>
-          <span>
-            A component of many instruments including the piano, organ, and
-            harpsichord consisting of usually black and white keys that cause
-            different tones to be produced when struck.
-          </span>
-        </li>
-        <li>
-          <span>
-            A device with keys of a musical keyboard, used to control electronic
-            sound-producing devices which may be built into or separate from the
-            keyboard device.
-          </span>
-        </li>
+        {Object.keys(props.wordObj).length !== 0
+          ? props.wordObj[0].meanings[0].definitions.map((item, index) => {
+              return (
+                <li key={index}>
+                  <span>{item.definition}</span>
+                </li>
+              );
+            })
+          : ""}
       </ul>
       <div className="flex gap-6 mt-6">
         <span className="text-4 leading-5 text-[#757575]">Synonyms</span>
