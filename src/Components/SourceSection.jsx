@@ -13,7 +13,7 @@ const SourceSection = (props) => {
             ? props.wordObj[0].sourceUrls
             : ""}
         </span>
-        <CopyIcon />
+        <CopyIcon wordObj={props.wordObj} />
       </div>
     </div>
   );
