@@ -1,4 +1,5 @@
 const NounSection = (props) => {
+  console.log(props.wordObj);
   return (
     <div>
       <div className="flex items-center gap-4 mb-[31px]">
@@ -19,11 +20,21 @@ const NounSection = (props) => {
             })
           : ""}
       </ul>
-      <div className="flex gap-6 mt-6">
+      <div className="flex gap-6 mt-6  flex-wrap">
         <span className="text-4 leading-5 text-[#757575]">Synonyms</span>
-        <span className="text-4 leading-5 text-[#A445ED] font-bold">
-          electronic keyboard
-        </span>
+        {Object.keys(props.wordObj).length !== 0 &&
+        props.wordObj[0].meanings[0].synonyms.length !== 0
+          ? props.wordObj[0].meanings[0].synonyms.map((item, index) => {
+              return (
+                <span
+                  key={index}
+                  className="text-4 leading-5 text-[#A445ED] font-bold "
+                >
+                  {item}
+                </span>
+              );
+            })
+          : ""}
       </div>
     </div>
   );

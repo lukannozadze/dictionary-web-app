@@ -32,7 +32,7 @@ const MainPage = () => {
       <SearchedWord wordObj={wordObj} />
       <NounSection wordObj={wordObj} />
       <VerbSection wordObj={wordObj} />
-      <SourceSection />
+      <SourceSection wordObj={wordObj} />
     </div>
   );
 };
