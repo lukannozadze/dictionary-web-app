@@ -22,7 +22,7 @@ const VerbSection = (props) => {
                       {item.definition}
                     </span>
                     <span className="text-[15px] leading-6 text-[#757575]">
-                      {`“${item.example ? item.example : ""}”`}
+                      {item.example ? `${item.example}` : ""}
                     </span>
                   </div>
                 </li>

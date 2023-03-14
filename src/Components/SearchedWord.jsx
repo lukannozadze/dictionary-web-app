@@ -16,7 +16,9 @@ const SearchedWord = (props) => {
             : ""}
         </span>
       </div>
-      <PlayerIcon />
+      <PlayerIcon
+        wordObj={Object.keys(props.wordObj).length !== 0 ? props.wordObj : ""}
+      />
     </div>
   );
 };
