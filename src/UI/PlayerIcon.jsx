@@ -45,8 +45,8 @@ const PlayerIcon = (props) => {
     >
       <circle opacity="0.25" cx="24" cy="24" r="24" fill="#A445ED" />
       <path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
+        fillRule="evenodd"
+        clipRule="evenodd"
         d="M19 18V31L32 24.5L19 18Z"
         fill="#A445ED"
       />
