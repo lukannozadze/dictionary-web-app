@@ -1,5 +1,8 @@
+import { useDispatch } from "react-redux";
+import { searchedWordActions } from "../store/store";
+
 const NounSection = (props) => {
-  console.log(props.wordObj);
+  const dispatch = useDispatch();
   return (
     <div>
       <div className="flex items-center gap-4 mb-[31px]">
@@ -26,12 +29,15 @@ const NounSection = (props) => {
         props.wordObj[0].meanings[0].synonyms.length !== 0
           ? props.wordObj[0].meanings[0].synonyms.map((item, index) => {
               return (
-                <span
+                <button
+                  onClick={() => {
+                    dispatch(searchedWordActions.setWord(item));
+                  }}
                   key={index}
                   className="text-4 leading-5 text-[#A445ED] font-bold "
                 >
                   {item}
-                </span>
+                </button>
               );
             })
           : ""}
