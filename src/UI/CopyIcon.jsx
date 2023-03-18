@@ -6,6 +6,7 @@ const CopyIcon = (props) => {
       viewBox="0 0 13 14"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      className="sxl:mb-[20px]"
       onClick={() => {
         navigator.clipboard.writeText(
           Object.keys(props.wordObj).length !== 0
