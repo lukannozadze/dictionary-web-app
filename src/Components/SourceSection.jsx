@@ -1,6 +1,5 @@
 import { useSelector } from "react-redux";
 import CopyIcon from "../UI/CopyIcon";
-import { Link } from "react-router-dom";
 
 const SourceSection = (props) => {
   const sourceLink =
