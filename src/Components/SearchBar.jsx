@@ -33,8 +33,8 @@ const SearchBar = () => {
           className={`w-full h-12 bg-[#F4F4F4] ${
             errors.word ? "border-[1px] border-[#FF5252]" : ""
           } pl-6 rounded-2xl outline-none text-4 placeholder:font-bold font-bold ${
-            isDark ? "bg-zinc-800 text-white" : "text-[#2D2D2D"
-          }`}
+            isDark ? "bg-zinc-800 text-white" : "text-[#2D2D2D]"
+          } focus:border-[1px] border-[#A445ED] md:h-16`}
           type="text"
           placeholder="Search for any word..."
         />

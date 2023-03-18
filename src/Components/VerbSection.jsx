@@ -8,7 +8,7 @@ const VerbSection = (props) => {
         <span
           className={` ${
             isDark ? "text-white" : "text-[#2D2D2D]"
-          } font-bold italic text-[18px] leading-[22px]`}
+          } font-bold italic text-[18px] leading-[22px] md:text-[20px]`}
         >
           verb
         </span>
@@ -21,11 +21,11 @@ const VerbSection = (props) => {
       <span
         className={`${
           isDark ? "text-white" : "text-[#757575]"
-        }  text-base leading-[20px] mb-[17px]`}
+        }  text-base leading-[20px] mb-[17px] md:text-[18px]`}
       >
         Meaning
       </span>
-      <ul className="list-disc  text-[#2D2D2D] text-[15px] leading-6 flex flex-col gap-[13px] mt-[17px] ml-[19px] mb-8">
+      <ul className="list-disc  text-[#2D2D2D]  leading-6 flex flex-col gap-[13px] mt-[17px] ml-[19px] mb-8">
         {Object.keys(props.wordObj).length !== 0 &&
         props.wordObj[0].meanings[1] !== undefined
           ? props.wordObj[0].meanings[1].definitions.map((item, index) => {
@@ -35,11 +35,11 @@ const VerbSection = (props) => {
                     <span
                       className={`text-[15px] leading-6  ${
                         isDark ? "text-white" : "text-[#2D2D2D]"
-                      }`}
+                      } md:text-[17px]`}
                     >
                       {item.definition}
                     </span>
-                    <span className="text-[15px] leading-6 text-[#757575]">
+                    <span className="text-[15px] leading-6 text-[#757575] md:text-[17px]">
                       {item.example ? `${item.example}` : ""}
                     </span>
                   </div>

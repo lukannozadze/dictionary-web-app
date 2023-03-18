@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
-
+import { useMediaQuery } from "react-responsive";
 const PlayerIcon = (props) => {
   const [audioPath, setAudioPath] = useState("");
   const [audioObj, setAudioObj] = useState({});
+  const isTabletOrMobile = useMediaQuery({ query: "(min-width: 768px)" });
   useEffect(() => {
     if (Object.keys(props.wordObj).length !== 0) {
       if (props.wordObj[0].phonetics.length > 0) {
@@ -27,14 +28,23 @@ const PlayerIcon = (props) => {
   };
   return (
     <svg
-      width="48"
-      height="48"
+      width={isTabletOrMobile ? "52" : "48"}
+      height={isTabletOrMobile ? "52" : "48"}
       viewBox="0 0 48 48"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       onClick={playAudio}
+      id="player-icon"
+      className="cursor-pointer"
     >
-      <circle opacity="0.25" cx="24" cy="24" r="24" fill="#A445ED" />
+      <circle
+        opacity="0.25"
+        cx="24"
+        cy="24"
+        r="24"
+        fill="#A445ED"
+        id="player-icon-circle"
+      />
       <path
         fillRule="evenodd"
         clipRule="evenodd"

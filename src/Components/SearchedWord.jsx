@@ -9,14 +9,14 @@ const SearchedWord = (props) => {
         <h1
           className={`text-[32px] leading-[38px] mb-[6px] ${
             isDark ? "text-white" : "text-[#2D2D2D]"
-          }  font-bold`}
+          }  font-bold md:text-[36px]`}
         >
           {Object.keys(props.wordObj).length !== 0
             ? props.wordObj[0].word[0].toUpperCase() +
               props.wordObj[0].word.slice(1)
             : ""}
         </h1>
-        <span className="text-[#A445ED] font-normal">
+        <span className="text-[#A445ED] font-normal md:text-[20px]">
           {Object.keys(props.wordObj).length !== 0
             ? props.wordObj[0].phonetic
             : ""}

@@ -4,12 +4,12 @@ const SourceSection = (props) => {
   const isDark = useSelector((state) => state.mode.isDark);
   return (
     <div className="flex flex-col gap-2">
-      <span className="text-[14px] leading-[17px] text-[#757575] underline">
+      <span className="text-[14px] leading-[17px] text-[#757575] underline md:text-[16px]">
         Source
       </span>
       <div className="flex gap-[9px] items-center">
         <span
-          className={`text-[14px] leading-[17px] ${
+          className={`text-[14px] leading-[17px] md:text-[16px] ${
             isDark ? "text-white" : "text-[#2D2D2D]"
           } underline`}
         >

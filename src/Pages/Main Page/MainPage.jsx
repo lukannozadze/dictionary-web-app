@@ -32,7 +32,9 @@ const MainPage = () => {
 
   return (
     <div
-      className={`${isDark ? "bg-[#1F1F1F]" : ""} pl-6 pr-6 pb-[85px] ${font}`}
+      className={`${
+        isDark ? "bg-[#1F1F1F]" : ""
+      } pl-6 pr-6 pb-[85px] duration-700  ${font}`}
     >
       {isError ? (
         <div>
@@ -44,7 +46,11 @@ const MainPage = () => {
           </div>
           <div className="flex flex-col justify-center text-center gap-6">
             <span className="text-[64px]">&#128533;</span>
-            <span className="text-4 font-bold text-[#2D2D2D]">
+            <span
+              className={`text-4 font-bold  ${
+                isDark ? "text-white" : "text-[#2D2D2D]"
+              }`}
+            >
               No Definitions Found
             </span>
             <p className="text-[#757575] text-[14px]">

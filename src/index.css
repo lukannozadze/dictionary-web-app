@@ -13,3 +13,14 @@ li span {
   position: relative;
   left: 5px;
 }
+
+#player-icon:hover path {
+  fill: white;
+}
+html {
+  height: 100vh;
+}
+body,
+#root {
+  height: 100%;
+}

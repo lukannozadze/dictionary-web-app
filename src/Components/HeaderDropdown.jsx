@@ -22,7 +22,7 @@ const HeaderDropdown = () => {
         <span
           className={`text-sm ${
             isDark ? "text-white" : ""
-          } font-bold leading-6`}
+          } font-bold leading-6 md:text-lg md:leading-6`}
         >
           {chosenFont}
         </span>

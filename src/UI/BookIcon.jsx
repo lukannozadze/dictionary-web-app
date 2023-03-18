@@ -1,8 +1,10 @@
+import { useMediaQuery } from "react-responsive";
 const BookIcon = () => {
+  const isTabletOrMobile = useMediaQuery({ query: "(min-width: 768px)" });
   return (
     <svg
-      width="28"
-      height="32"
+      width={isTabletOrMobile ? "32" : "28"}
+      height={isTabletOrMobile ? "36.5" : "32"}
       viewBox="0 0 34 38"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
