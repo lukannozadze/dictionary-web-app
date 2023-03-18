@@ -6,7 +6,7 @@ const NounSection = (props) => {
   const dispatch = useDispatch();
   return (
     <div>
-      <div className="flex items-center gap-4 mb-[31px]">
+      <div className="flex items-center gap-4 mb-[31px] sxl:mb-[40px]">
         <span
           className={`${
             isDark ? "text-white normal" : "text-[#2D2D2D] italic"

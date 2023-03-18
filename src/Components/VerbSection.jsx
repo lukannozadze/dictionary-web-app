@@ -8,7 +8,7 @@ const VerbSection = (props) => {
         <span
           className={` ${
             isDark ? "text-white" : "text-[#2D2D2D]"
-          } font-bold italic text-[18px] leading-[22px] md:text-[20px]`}
+          } font-bold italic text-[18px] leading-[22px] md:text-[20px] sxl:mt-[20px] sxl:mb-[20px] `}
         >
           verb
         </span>

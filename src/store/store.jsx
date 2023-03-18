@@ -1,6 +1,6 @@
 import { configureStore } from "@reduxjs/toolkit";
 import fontSlice from "./font-slicer";
-import modeSlice from "./mode-slicer";
+import modeSlice from "./mode-slice";
 import searchedWordSlice from "./searchedWord-slicer";
 const store = configureStore({
   reducer: {

@@ -34,11 +34,11 @@ const MainPage = () => {
     <div
       className={`${
         isDark ? "bg-[#1F1F1F]" : ""
-      } pl-6 pr-6 pb-[85px] duration-700  ${font}`}
+      } pl-6 pr-6 pb-[85px] duration-700  ${font} sxl:w-[732px]  `}
     >
       {isError ? (
         <div>
-          <div className="pt-6 mb-6">
+          <div className="pt-6 mb-6  ">
             <Header />
           </div>
           <div className="mb-6">
@@ -53,7 +53,7 @@ const MainPage = () => {
             >
               No Definitions Found
             </span>
-            <p className="text-[#757575] text-[14px]">
+            <p className="text-[#757575] text-[14px] ">
               Sorry pal, we couldn't find definitions for the word you were
               looking for. You can try the search again at later time or head to
               the web instead.

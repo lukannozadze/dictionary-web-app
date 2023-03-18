@@ -27,7 +27,7 @@ const SearchBar = () => {
   }, [watch("word")]);
   return (
     <form onSubmit={handleSubmit((e) => e.preventDefault)} id="form">
-      <label className="relative" htmlFor="searchWord">
+      <label className="relative sxl:mt-[50px]" htmlFor="searchWord">
         <input
           {...register("word")}
           className={`w-full h-12 bg-[#F4F4F4] ${

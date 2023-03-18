@@ -2,6 +2,9 @@
 module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
+    screens: {
+      sxl: "1440px",
+    },
     extend: {
       fontFamily: {
         inter: ["Inter", "sans-serif"],
