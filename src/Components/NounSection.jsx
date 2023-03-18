@@ -1,18 +1,37 @@
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { searchedWordActions } from "../store/store";
 
 const NounSection = (props) => {
+  const isDark = useSelector((state) => state.mode.isDark);
   const dispatch = useDispatch();
   return (
     <div>
       <div className="flex items-center gap-4 mb-[31px]">
-        <span className="text-[#2D2D2D] font-bold italic text-[18px] leading-[22px]">
+        <span
+          className={`${
+            isDark ? "text-white normal" : "text-[#2D2D2D] italic"
+          } font-bold   text-[18px] leading-[22px]`}
+        >
           noun
         </span>
-        <div className="w-full h-[1px] bg-[#E9E9E9]"></div>
+        <div
+          className={`w-full h-[1px] ${
+            isDark ? "bg-[#3A3A3A]" : "bg-[#E9E9E9]"
+          }`}
+        ></div>
       </div>
-      <span className="text-[#757575] text-base leading-[20px]">Meaning</span>
-      <ul className="list-disc ml-[19px] text-[#2D2D2D] text-[15px] leading-6 flex flex-col gap-[13px] mt-[17px]">
+      <span
+        className={` ${
+          isDark ? "text-white" : "text-[#757575]"
+        } text-base leading-[20px]`}
+      >
+        Meaning
+      </span>
+      <ul
+        className={`list-disc ml-[19px] ${
+          isDark ? "text-white" : "text-[#2D2D2D]"
+        } text-[15px] leading-6 flex flex-col gap-[13px] mt-[17px]`}
+      >
         {Object.keys(props.wordObj).length !== 0
           ? props.wordObj[0].meanings[0].definitions.map((item, index) => {
               return (

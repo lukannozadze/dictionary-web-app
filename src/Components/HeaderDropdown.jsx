@@ -1,12 +1,13 @@
 import BottomArrow from "../UI/BottomArrow";
 import React, { useState } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { fontActions } from "../store/store";
 
 const HeaderDropdown = () => {
   const dispatch = useDispatch();
   const [isClicked, setIsClicked] = useState(false);
   const [chosenFont, setChosenFont] = useState("Sans Serif");
+  const isDark = useSelector((state) => state.mode.isDark);
   const listClickHandler = (e) => {
     dispatch(fontActions.setFont(e.target.id));
     setChosenFont(e.target.id);
@@ -18,11 +19,21 @@ const HeaderDropdown = () => {
         className="flex items-center gap-4 cursor-pointer"
         onClick={() => setIsClicked(!isClicked)}
       >
-        <span className="text-sm font-bold leading-6">{chosenFont}</span>
+        <span
+          className={`text-sm ${
+            isDark ? "text-white" : ""
+          } font-bold leading-6`}
+        >
+          {chosenFont}
+        </span>
         <BottomArrow />
       </div>
       <div
-        className={`pl-6 pt-6 pb-6 w-[159px] bg-white shadow-custom text-lg leading-6 font-bold rounded-2xl absolute top-8 right-0 z-10 ${
+        className={`pl-6 pt-6 pb-6 w-[159px] ${
+          isDark
+            ? "bg-[#2D2D2D] text-white hover:shadow-darkCustom"
+            : "bg-white text-black"
+        }  shadow-custom text-lg leading-6 font-bold rounded-2xl absolute top-8 right-0 z-10 ${
           isClicked ? "block" : "hidden"
         } `}
       >

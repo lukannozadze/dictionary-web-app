@@ -11,18 +11,17 @@ const MainPage = () => {
   const [isError, setIsError] = useState(false);
   const word = useSelector((state) => state.searchedWord.searchedWord);
   const font = useSelector((state) => state.font.font);
+  const isDark = useSelector((state) => state.mode.isDark);
   const searchWord = async () => {
     const response = await fetch(
       `https://api.dictionaryapi.dev/api/v2/entries/en/${word}`
     );
-    console.log(response.status);
+
     const data = await response.json();
     if (response.ok) {
-      console.log("In");
       setWordObj(data);
       setIsError(false);
     } else {
-      console.log("else");
       setIsError(true);
       return; //not found component state => true
     }
@@ -32,7 +31,9 @@ const MainPage = () => {
   }, [word]);
 
   return (
-    <div className={`pl-6 pr-6 pb-[85px] ${font}`}>
+    <div
+      className={`${isDark ? "bg-[#1F1F1F]" : ""} pl-6 pr-6 pb-[85px] ${font}`}
+    >
       {isError ? (
         <div>
           <div className="pt-6 mb-6">

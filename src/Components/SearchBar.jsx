@@ -3,12 +3,14 @@ import SearchIcon from "../UI/SearchIcon";
 import { useForm } from "react-hook-form";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
+import { useSelector } from "react-redux";
 const SearchBar = () => {
+  const isDark = useSelector((state) => state.mode.isDark);
   const schema = yup.object().shape({
     word: yup
       .string()
       .required("Whoops, can’t be empty…")
-      .matches(/^[aA-zZ]+$/, "Wrong Format!"),
+      .matches(/^[A-Za-z\s]*$/, "Wrong Format!"),
   });
   const {
     register,
@@ -30,7 +32,9 @@ const SearchBar = () => {
           {...register("word")}
           className={`w-full h-12 bg-[#F4F4F4] ${
             errors.word ? "border-[1px] border-[#FF5252]" : ""
-          } pl-6 rounded-2xl outline-none text-4 placeholder:font-bold font-bold text-[#2D2D2D]`}
+          } pl-6 rounded-2xl outline-none text-4 placeholder:font-bold font-bold ${
+            isDark ? "bg-zinc-800 text-white" : "text-[#2D2D2D"
+          }`}
           type="text"
           placeholder="Search for any word..."
         />

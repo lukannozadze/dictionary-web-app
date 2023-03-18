@@ -1,10 +1,16 @@
+import { useSelector } from "react-redux";
 import PlayerIcon from "../UI/PlayerIcon";
 
 const SearchedWord = (props) => {
+  const isDark = useSelector((state) => state.mode.isDark);
   return (
     <div className="flex justify-between items-center mb-[29px]">
       <div>
-        <h1 className="text-[32px] leading-[38px] mb-[6px] text-[#2D2D2D] font-bold">
+        <h1
+          className={`text-[32px] leading-[38px] mb-[6px] ${
+            isDark ? "text-white" : "text-[#2D2D2D]"
+          }  font-bold`}
+        >
           {Object.keys(props.wordObj).length !== 0
             ? props.wordObj[0].word[0].toUpperCase() +
               props.wordObj[0].word.slice(1)
